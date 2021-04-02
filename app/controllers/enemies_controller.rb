@@ -3,7 +3,7 @@ class EnemiesController < ApplicationController
 
   def update
     if @enemy.update(enemy_params)
-      render json: @enemy, status: ok
+      render json: @enemy, status: :ok
     else
       render json: { erros: @enemy.errors }, status: :unprocessable_entity
     end
